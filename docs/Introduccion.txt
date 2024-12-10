@@ -1,0 +1,24 @@
+El proyecto consiste en desarrollar un plugin de Chrome que permita monitorizar las URLs a las que accede un alumno durante un examen. La idea principal es asegurar que el alumno se quede dentro del entorno permitido, garantizando la integridad del proceso de evaluación. A continuación, te detallo cómo sería el funcionamiento y los puntos principales de este proyecto:
+
+Almacenamiento de URLs:
+El plugin tiene que ser capaz de registrar todas las URLs que el alumno visita mientras realiza el examen. Además de las URLs, sería útil almacenar los parámetros que acompañan las solicitudes (como los datos de las peticiones GET o POST) y otros detalles como la fecha, hora y el usuario que está accediendo a esas páginas. Esto nos permitirá tener un registro completo y preciso de la actividad del alumno.
+
+Privacidad:
+Es muy importante que, aunque se registren las URLs visitadas, el plugin respete la privacidad del alumno. Esto quiere decir que no debe almacenar datos sensibles como las contraseñas de inicio de sesión u otra información personal. La seguridad y la privacidad de los estudiantes son clave, por lo que el sistema debe estar diseñado para filtrar este tipo de datos.
+
+Identificación del alumno:
+En este caso, no tendríamos un sistema de login convencional, por lo que el plugin necesita una forma de identificar al alumno de manera automática. Una posible solución sería analizar la página del aula virtual para detectar al estudiante, generando un ID de sesión que se asocie al alumno durante todo el examen. De esta manera, aunque no haya un usuario registrado de forma explícita, podemos seguir y registrar las actividades del alumno.
+
+Detección de desactivación del plugin:
+El plugin también debe ser capaz de detectar si el alumno intenta desactivarlo. Si el alumno apaga o manipula el plugin de alguna manera, el sistema debe alertar de inmediato al profesor, registrando este intento de manipulación para garantizar que no se altere el proceso de evaluación.
+
+Colaboración en Git:
+Para que este proyecto sea más dinámico, se podría llevar a cabo de forma colaborativa a través de un repositorio en Git, donde cada miembro del equipo puede contribuir con una parte del desarrollo. Usar Git facilita mucho el trabajo en equipo, permite gestionar el código de manera eficiente y realizar revisiones para asegurar que todo esté bien hecho.
+
+Almacenamiento de datos:
+La información que recoja el plugin se almacenaría en una base de datos, probablemente usando WAMP (una solución sencilla y bastante eficaz). No sería necesario implementar un sistema de login, ya que el seguimiento de la actividad del alumno se basaría en el ID de sesión generado por el plugin. Esto facilita el proceso, manteniéndolo sencillo pero eficiente.
+
+Seguridad de la información:
+Para evitar falsificaciones o manipulaciones, toda la información que el plugin envíe a la base de datos debe ser encriptada. Además, el profesor proporcionaría una contraseña de examen al plugin, la cual estaría integrada de manera transparente para evitar que el alumno intente alterar los datos. Esto garantizaría que solo los datos válidos se registren y que no haya formas de engañar al sistema.
+
+En resumen, el propósito de este proyecto es ofrecer una herramienta que asegure la transparencia en los exámenes, minimice el riesgo de trampas y respete la privacidad del alumno. Además, el hecho de que el desarrollo sea colaborativo permite que los estudiantes también aprendan buenas prácticas de trabajo en equipo y programación.
