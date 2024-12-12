@@ -20,3 +20,5 @@ Esta es la carpeta principal que contiene todos los archivos necesarios (JavaScr
 docs/:
 Documentacion de la extension.
 
+github/workflows/:
+Cosas automatizadas de GitHub
