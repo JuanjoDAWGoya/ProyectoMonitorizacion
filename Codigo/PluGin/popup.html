@@ -1,21 +1,29 @@
-// popup.js
-
-// Obtener el historial de URLs visitadas desde chrome.storage
-chrome.storage.local.get('visitedUrls', function(result) {
-    const visitedUrls = result.visitedUrls || [];
-    const urlList = document.getElementById('urlList');
-  
-    // Si hay URLs visitadas, las mostramos
-    if (visitedUrls.length > 0) {
-      visitedUrls.forEach(function(item) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `URL: ${item.url} | Usuario: ${item.user} | Fecha: ${item.timestamp}`;
-        urlList.appendChild(listItem);
-      });
-    } else {
-      const listItem = document.createElement('li');
-      listItem.textContent = 'No se han registrado URLs visitadas.';
-      urlList.appendChild(listItem);
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Navegación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 300px;
     }
-  });
-  
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>URLs Visitadas</h3>
+  <ul id="urlList">
+    <!-- Las URLs visitadas se mostrarán aquí -->
+  </ul>
+  <script src="popup.js"></script>
+</body>
+</html>
