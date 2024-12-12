@@ -1,1 +1,18 @@
-
+{
+    "manifest_version": 3,
+    "name": "User Name Fetcher",
+    "version": "1.0",
+    "description": "Fetches the content of a specific span tag from a webpage.",
+    "permissions": [
+      "Tab"
+    ],
+    "background": {
+    "service_worker": "background.js"
+  },
+    "content_scripts": [
+      {
+        "matches": ["https://aulavirtual.murciaeduca.es/*"],
+        "js": ["script.js"]
+      }
+    ]
+  }
