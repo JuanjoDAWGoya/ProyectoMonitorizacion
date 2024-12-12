@@ -9,7 +9,7 @@ chrome.storage.local.get('visitedUrls', function(result) {
     if (visitedUrls.length > 0) {
       visitedUrls.forEach(function(item) {
         const listItem = document.createElement('li');
-        listItem.textContent = `URL: ${item.url} | Usuario: ${item.user} | Fecha: ${item.timestamp}`;
+        listItem.textContent = `URL: ${item.url} | Usuario: ${item.user} | Fecha: ${item.timestamp} | ID: ${item.ID}`;
         urlList.appendChild(listItem);
       });
     } else {
