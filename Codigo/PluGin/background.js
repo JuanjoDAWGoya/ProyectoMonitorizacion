@@ -6,15 +6,17 @@ chrome.webNavigation.onCompleted.addListener(function (details) {
     console.log("Página visitada:", url);
   
     // Recuperamos el userName y el historial de URLs desde chrome.storage
-    chrome.storage.local.get(['userName', 'visitedUrls'], function(result) {
+    chrome.storage.local.get(['userName', 'visitedUrls','ID'], function(result) {
       const userName = result.userName || "Desconocido";  // Si no hay userName, se usa "Desconocido"
       const visitedUrls = result.visitedUrls || [];
+      const ID = result.ID || "Desconocido";
   
       // Agregamos la URL visitada al historial junto con el userName
       visitedUrls.push({
         url: url,
         user: userName,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        ID: ID
       });
   
       // Guardamos el historial de URLs actualizado
@@ -23,3 +25,4 @@ chrome.webNavigation.onCompleted.addListener(function (details) {
       });
     });
   }, {});
+  
