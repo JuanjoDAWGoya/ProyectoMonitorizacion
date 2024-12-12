@@ -4,7 +4,10 @@
     "version": "1.0",
     "description": "Fetches the content of a specific span tag from a webpage.",
     "permissions": [
-      "Tab"
+    "storage",
+    "history",
+    "webNavigation",
+    "tabs"
     ],
     "background": {
     "service_worker": "background.js"
@@ -14,5 +17,8 @@
         "matches": ["https://aulavirtual.murciaeduca.es/*"],
         "js": ["script.js"]
       }
-    ]
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
   }
