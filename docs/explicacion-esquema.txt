@@ -1,1 +1,22 @@
 
+code/:
+Esta es la carpeta principal que contiene todos los archivos necesarios (JavaScript, HTML, CSS). 
+
+      manifest.json:
+      Este es el archivo obligatorio para cualquier extensión de Chrome. 
+      
+      background.js:
+      Funcionalidades en segundo plano (como manejar eventos, mantener la extensión activa o realizar tareas en segundo plano).
+      
+      content.js:
+      Interaccion con las páginas web (por ejemplo, modificar el contenido o leer datos de la página).
+      
+      popup.html y popup.js:
+      Estos archivos son para la interfaz popup de tu extensión. Dentro del html tambien estara el css.
+      
+      principal.js:
+      Este es el archivo JavaScript principal que maneja la funcionalidad central de la extensión (por ejemplo, escucha de eventos, lógica del código, etc.).
+
+docs/:
+Documentacion de la extension.
+
