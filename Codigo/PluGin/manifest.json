@@ -15,7 +15,7 @@
     "content_scripts": [
       {
         "matches": ["https://aulavirtual.murciaeduca.es/*"],
-        "js": ["script.js"]
+        "js": ["principal.js"]
       }
     ],
     "action": {
